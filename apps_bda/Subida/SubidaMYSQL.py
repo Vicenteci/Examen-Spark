@@ -32,3 +32,22 @@ df_joined = df_tienda.join(df_ventas, df_tienda["store_id"] == df_ventas["store_
 df_joined.write.mode('overwrite').csv('s3a://bucket/mysql_data', header=True, sep=',')
 
 spark.stop()
+
+
+
+
+
+
+
+
+
+
+""""
+En SQL, los JOINs más comunes son:
+
+INNER JOIN: Devuelve las filas que tienen coincidencias en ambas tablas.
+
+LEFT JOIN o LEFT OUTER JOIN: Devuelve todas las filas de la tabla izquierda (la primera tabla), y las filas coincidentes de la tabla derecha (segunda tabla). Si no hay coincidencia, los resultados de la tabla derecha serán NULL.
+
+RIGHT JOIN o RIGHT OUTER JOIN: Es lo mismo que el LEFT JOIN, pero devuelve todas las filas de la tabla derecha.
+"""

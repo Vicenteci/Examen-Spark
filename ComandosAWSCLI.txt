@@ -1,0 +1,37 @@
+# Vamos a crear el archivo Python con los comandos para trabajar con awslocal y S3 en Locastack
+
+comandos_awslocal = """
+# Comandos básicos de awslocal para S3 en Locastack
+
+# 1. Listar los buckets
+# awslocal s3 ls
+
+# 2. Crear un nuevo bucket
+# awslocal s3 mb s3://<nombre_del_bucket>
+
+# 3. Eliminar un bucket
+# awslocal s3 rb s3://<nombre_del_bucket> --force
+
+# 4. Listar los objetos dentro de un bucket
+# awslocal s3 ls s3://<nombre_del_bucket>/
+
+# 5. Subir un archivo a un bucket
+# awslocal s3 cp <archivo_local> s3://<nombre_del_bucket>/
+
+# 6. Descargar un archivo desde un bucket
+# awslocal s3 cp s3://<nombre_del_bucket>/<archivo> <ruta_local>
+
+# 7. Eliminar un archivo de un bucket
+# awslocal s3 rm s3://<nombre_del_bucket>/<archivo>
+
+# 8. Eliminar todos los archivos de un bucket
+# awslocal s3 rm s3://<nombre_del_bucket>/ --recursive
+"""
+
+# Guardamos los comandos en un archivo Python
+archivo_comandos_path = '/mnt/data/comandos_awslocal_s3.py'
+
+with open(archivo_comandos_path, 'w') as f:
+    f.write(comandos_awslocal)
+
+archivo_comandos_path
